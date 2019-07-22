@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class StoreDirectoryToHdfs {
+    
     static void listDirectory(FTPClient ftpClient, String parentDir,
                               String currentDir, int level) throws IOException {
         String dirToList = parentDir;
@@ -46,6 +47,8 @@ public class StoreDirectoryToHdfs {
             }
         }
     }
+    
+    
     public static void main(String args[]){
 
         String server = "echanges.dila.gouv.fr";
