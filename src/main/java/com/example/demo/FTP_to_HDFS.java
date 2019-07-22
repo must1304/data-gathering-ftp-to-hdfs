@@ -60,36 +60,5 @@ class FTPtoHDFS
     {
         StoreFile("SARDE/DTD SARDE FREEMIUM", "SCHEMA_SARDE_1.0.zip");
     }
-
-    /*public static void main(String[] args) throws IOException, URISyntaxException
-    {
-
-        String src="ftp://echanges.dila.gouv.fr/AMF/924/2019/02/FC924269831_20190219.pdf";
-
-        Configuration conf = new Configuration();
-
-        conf.addResource(new Path("/home/mustapha/Bureau/PFE/hadoop-2.8.5/etc/hadoop/core-site.xml"));
-
-        conf.addResource(new Path("/home/mustapha/Bureau/PFE/hadoop-2.8.5/etc/hadoop/hdfs-site.xml"));
-
-
-        FTPFileSystem ftpfs = new FTPFileSystem();
-
-        ftpfs.setConf(conf);
-
-        ftpfs.initialize(new URI("ftp://anonymous:anonymous@echanges.dila.gouv.fr"), conf);
-        //ftpfs.initialize(new URI("ftp://username:password@host"), conf);
-
-        FSDataInputStream fsdin = ftpfs.open(new Path(src), 1000);
-
-        FileSystem fileSystem=FileSystem.get(conf);
-
-        //OutputStream outputStream=fileSystem.create(new Path(args[0]));
-        OutputStream outputStream=fileSystem.create(new Path("testaz.pdf"));
-
-
-        IOUtils.copyBytes(fsdin, outputStream, conf, true);
-
-    }*/
-
+    
 }
